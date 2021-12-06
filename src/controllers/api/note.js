@@ -1,17 +1,20 @@
+const { v4: uuidv4 } = require("uuid");
+const { readNotesFromFile } = require("../../utils.js");
+
 const getNotes = (req, res) => {
-  //  read from json file
-  // parse the data
-  // return an array of notes
+  const notes = readNotesFromFile();
+  if (notes.length) {
+    return res.json(notes);
+  } else {
+    return res.status(404).json({
+      message: "Please enter note",
+    });
+  }
 };
 
 const createNote = (req, res) => {
-  //  validate post body -has to have text
-  // create new note object
-  // note : {title:"", text:"", id:""}
-  // for id use uuid
-  // read from json
-  // push
-  // write to json
+  const payload = req.body;
+  const newNote = {};
 };
 
 const deleteNote = (req, res) => {
