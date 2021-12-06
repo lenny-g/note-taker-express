@@ -2,7 +2,7 @@ const fs = require("fs");
 
 const path = require("path");
 
-const readNotesFromFile = () => {
+const getNotesFromFile = () => {
   const noteJSON = fs.readFileSync(
     path.join(__dirname, "/db/db.json"),
     "utf-8"
@@ -13,7 +13,11 @@ const readNotesFromFile = () => {
 };
 
 const writeNotesToFile = (data) => {
-  fs.writeFileSync(path.join(_dirname, "/db/db.json"), data);
+  try {
+    fs.writeFileSync(path.join(_dirname, "/db/db.json"), data);
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
-module.exports = { readNotesFromFile, writeNotesToFile };
+module.exports = { getNotesFromFile, writeNotesToFile };
