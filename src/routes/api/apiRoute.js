@@ -1,7 +1,7 @@
 // import router from express.
 const { Router } = require("express");
 
-const notesRoutes = require("./notes");
+const notesRoutes = require("./noteRoute");
 
 // creating instance of router
 const router = Router();

@@ -1,14 +1,18 @@
 // import router from express.
 const { Router } = require("express");
 
-const { getUserNotes, addNote, deleteNote } = require("../../controllers/api");
+const {
+  getNotes,
+  createNote,
+  deleteNote,
+} = require("../../controllers/api/note");
 
 // creating instance of router
 const router = Router();
 
-router.get("/", getUserNotes);
+router.get("/", getNotes);
 
-router.post("/", addNote);
+router.post("/", createNote);
 
 router.delete("/:id", deleteNote);
 

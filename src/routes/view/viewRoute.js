@@ -1,16 +1,14 @@
 // import router from express.
 const { Router } = require("express");
 
-const apiRoutes = require("./api/apiRoute");
-
-// const viewRoutes = require("./view");
+const notesRoutes = require("./notesRoutejs");
 
 // creating instance of router
 const router = Router();
 
 // registering api endpoint
-router.use("/api", apiRoutes);
+router.use("/notes", notesRoutes);
 
-// router.use("/", viewRoutes);
+router.use("*", wildPath);
 
 module.exports = router;
