@@ -1,7 +1,7 @@
 // import router from express.
 const { Router } = require("express");
 
-const notesRoutes = require("./notesRoute.js");
+const { renderHome, renderNotes } = require("../../controllers/view");
 
 // creating instance of router
 const router = Router();
