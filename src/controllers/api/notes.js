@@ -3,6 +3,7 @@ const { getNotesFromFile, writeNotesToFile } = require("../../utils.js");
 
 const getNotes = (req, res) => {
   const notes = getNotesFromFile();
+  console.log(notes);
   if (notes.length) {
     return res.json(notes);
   } else {
@@ -15,7 +16,7 @@ const getNotes = (req, res) => {
 const createNote = (req, res) => {
   const payload = req.body;
 
-  const validKeys = ["id", "title", "text"];
+  const validKeys = ["title", "text"];
   const isValid = validKeys.every((key) => Object.keys(payload).includes(key));
 
   if (isValid) {
