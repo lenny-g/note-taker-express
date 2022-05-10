@@ -15,9 +15,11 @@ The objective of this project was to create an application called Note Taker tha
 ## SCREENSHOTS 
 
 This Screenshot shows the user creating a TODO item: 
+
 ![ScreenShot](https://i.ibb.co/nzfCJW7/Note-Taker-2.png)
 
 This Screenshot shows the saved item with a previous to do note:
+
 ![ScreenShot](https://i.ibb.co/ggw7Zcp/Note-Taker-1.png)
 
 
